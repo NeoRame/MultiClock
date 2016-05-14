@@ -5,7 +5,7 @@ Distributed under the terms of the GPL.
 
 Based on Pong Clock v 5.1 by Nick Hall
 For more informations and original Release Notes visit:
-http://123led.wordpress.com/
+https://123led.wordpress.com/about/
 
 
 -----------------------------------------------------------------------
