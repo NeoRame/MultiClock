@@ -27,7 +27,7 @@ Release Notes for v1.2 , updated April 2016 by NeoRame:
   * add Temperature to "Print Day of Week" Screen
   * add new tiny chars
   * tiny Font for Menu and Settings
-  * 
+  
 -----------------------------------------------------------------------
 Release Notes for v1.4 , updated April 2016 by NeoRame:
   * edit Random Menu
@@ -44,6 +44,7 @@ Release Notes for v1.5 , updated April 2016 by NeoRame:
   * add new icons for Special Events ;)
   * add Special Events on Weather Watchface
   * delete 12/24h Menu
+  
 -----------------------------------------------------------------------
 Release Notes for v1.5.3 , updated April 2016 by NeoRame:
   * add new created Invaders Font
