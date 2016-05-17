@@ -55,6 +55,10 @@ Release Notes for v1.5.3 , updated April 2016 by NeoRame:
   * add BCD Font
   
 -----------------------------------------------------------------------
+Release Notes for v1.5.4 , updated May 2016 by NeoRame:
+  * change Digits Watchface
+  
+-----------------------------------------------------------------------
 Uses 2x Sure 2416 LED modules, arduino and DS1307 clock chip.
 Distributed under the terms of the GPL.
              
