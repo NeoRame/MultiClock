@@ -47,6 +47,9 @@ Release Notes for v1.5.3 , updated April 2016 by NeoRame:
   * add Binary Watchface [BCD Style (Binary Coded Decimal)]
   * add BCD Font
 -----------------------------------------------------------------------
+Release Notes for v1.5.4 , updated May 2016 by NeoRame:
+  * change Digits Watchface
+-----------------------------------------------------------------------
 
 Uses 2x Sure 2416 LED modules, arduino and DS1307 clock chip.
 Distributed under the terms of the GPL.
@@ -892,7 +895,8 @@ void digits()
   set_next_date();
 
   // initially set mins to value 100 - so it wll never equal rtc[1] on the first loop of the clock, meaning we draw the clock display when we enter the function
-  byte secs = 100;
+  byte secs = rtc[0]; //seconds
+  byte old_secs = secs; //holds old seconds value - from last time seconds were updated o display - used to check if seconds have changed
   byte mins = 100;
   int count = 0;
 
@@ -927,27 +931,19 @@ void digits()
       secs = rtc[0];
 
       //draw :
-      plot (23 - offset, 4, 1); //top point
-      plot (23 - offset, 5, 1);
-      plot (24 - offset, 4, 1);
-      plot (24 - offset, 5, 1);
-      plot (23 - offset, 10, 1); //bottom point
-      plot (23 - offset, 11, 1);
-      plot (24 - offset, 10, 1);
-      plot (24 - offset, 11, 1);
+      plot (20 - offset, 13, 1); //bottom point
+      plot (20 - offset, 14, 1);
+      plot (21 - offset, 13, 1);
+      plot (21 - offset, 14, 1);
       count = 400;
     }
 
     //if count has run out, turn off the :
     if (count == 0) {
-      plot (23 - offset, 4, 0); //top point
-      plot (23 - offset, 5, 0);
-      plot (24 - offset, 4, 0);
-      plot (24 - offset, 5, 0);
-      plot (23 - offset, 10, 0); //bottom point
-      plot (23 - offset, 11, 0);
-      plot (24 - offset, 10, 0);
-      plot (24 - offset, 11, 0);
+      plot (20 - offset, 13, 0); //bottom point
+      plot (20 - offset, 14, 0);
+      plot (21 - offset, 13, 0);
+      plot (21 - offset, 14, 0);
     }
     else {
       count--;
@@ -957,7 +953,8 @@ void digits()
     //re draw the display if mins != rtc[1] i.e. if the time has changed from what we had stored in mins, (also trigggered on first entering function when mins is 100)
     if (mins != rtc[1]) {
 
-      //update mins and hours with the new values
+      //update secs, mins and hours with the new values
+      secs = rtc[0];
       mins = rtc[1];
       hours = rtc[2];
 
@@ -997,10 +994,10 @@ void digits()
         }
 
 
-        ht1632_putbigchar(5,  1, buffer[0]);
+        ht1632_putbigchar(4,  1, buffer[0]);
       }
       //print hours ones digit
-      ht1632_putbigchar(14 - offset, 1, buffer[1]);
+      ht1632_putbigchar(12 - offset, 1, buffer[1]);
 
 
       //print mins
@@ -1011,8 +1008,28 @@ void digits()
         buffer[0] = '0';
       }
       //print mins tens and ones digits
-      ht1632_putbigchar(28 - offset, 1, buffer[0]);
-      ht1632_putbigchar(37 - offset, 1, buffer[1]);
+      ht1632_putbigchar(24 - offset, 1, buffer[0]);
+      ht1632_putbigchar(32 - offset, 1, buffer[1]);
+    }
+    
+
+    //if secs changed then update them on the display
+    secs = rtc[0];
+    if (secs != old_secs) {
+
+      //secs
+      char buffer[3];
+      itoa(secs, buffer, 10);
+
+      //fix - as otherwise if num has leading zero, e.g. "03" secs, itoa coverts this to chars with space "3 ".
+      if (secs < 10) {
+        buffer[1] = buffer[0];
+        buffer[0] = '0';
+      }
+
+      ht1632_puttinychar(41 - offset, 2, buffer[0]); //seconds
+      ht1632_puttinychar(41 - offset, 9, buffer[1]); //seconds
+      old_secs = secs;
     }
   }
   fade_down();
@@ -3225,4 +3242,3 @@ void get_time()
   Serial.print(":");
   Serial.println(rtc[0]);
 }
-
