@@ -10,13 +10,13 @@ https://123led.wordpress.com/about/
 
 -----------------------------------------------------------------------
 Release Notes for v1.0 , updated January 2016 by SRDWA:
-  *rename from Prong Clock tu Multi Clock and initial release of Multi Clock
-  *lot of changes which SRDWA does, and i can't restore because
-  *start translating the Menus to german
+  * rename from Prong Clock tu Multi Clock and initial release of Multi Clock
+  * lot of changes which SRDWA does, and i can't restore because
+  * start translating the Menus to german
   
 -----------------------------------------------------------------------
 Release Notes for v1.1 , updated April 2016 by NeoRame:
-  *add new german translatings
+  * add new german translatings
   
 -----------------------------------------------------------------------
 Release Notes for v1.2 , updated April 2016 by NeoRame:
@@ -27,6 +27,7 @@ Release Notes for v1.2 , updated April 2016 by NeoRame:
   * add Temperature to "Print Day of Week" Screen
   * add new tiny chars
   * tiny Font for Menu and Settings
+  * 
   
 -----------------------------------------------------------------------
 Release Notes for v1.4 , updated April 2016 by NeoRame:
