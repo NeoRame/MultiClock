@@ -1,7 +1,7 @@
 # MultiClock
 
 Multi Clock v 1.0, Jan 2016 by SRDWA
- Distributed under the terms of the GPL.
+Distributed under the terms of the GPL.
 
 Based on Pong Clock v 5.1 by Nick Hall
 For more informations and original Release Notes visit:
