@@ -12,7 +12,7 @@ https://123led.wordpress.com/about/
 -----------------------------------------------------------------------
 Release Notes for v1.0 , updated January 2016 by SRDWA:
   * rename from Prong Clock tu Multi Clock and initial release of Multi Clock
-  * lot of changes which SRDWA does, and i can't restore because
+  * lot of changes which SRDWA does, and i can't restore 
   * start translating the Menus to german
   
 -----------------------------------------------------------------------
