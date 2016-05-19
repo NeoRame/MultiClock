@@ -1,6 +1,7 @@
 # MultiClock
 
 Multi Clock v 1.0, Jan 2016 by SRDWA
+
 Distributed under the terms of the GPL.
 
 Based on Pong Clock v 5.1 by Nick Hall
@@ -10,13 +11,13 @@ https://123led.wordpress.com/about/
 
 -----------------------------------------------------------------------
 Release Notes for v1.0 , updated January 2016 by SRDWA:
-  *rename from Prong Clock tu Multi Clock and initial release of Multi Clock
-  *lot of changes which SRDWA does, and i can't restore because
-  *start translating the Menus to german
+  * rename from Prong Clock tu Multi Clock and initial release of Multi Clock
+  * lot of changes which SRDWA does, and i can't restore because
+  * start translating the Menus to german
   
 -----------------------------------------------------------------------
 Release Notes for v1.1 , updated April 2016 by NeoRame:
-  *add new german translatings
+  * add new german translatings
   
 -----------------------------------------------------------------------
 Release Notes for v1.2 , updated April 2016 by NeoRame:
