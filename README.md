@@ -1,6 +1,6 @@
 # MultiClock
 
-Multi Clock v 1.0, Jan 2016 by SRDWA
+Multi Clock v 1.5.5, Jan 2016 by SRDWA
 
 Distributed under the terms of the GPL.
 
@@ -58,6 +58,11 @@ Release Notes for v1.5.3 , updated April 2016 by NeoRame:
 -----------------------------------------------------------------------
 Release Notes for v1.5.4 , updated May 2016 by NeoRame:
   * change Digits Watchface
+  
+-----------------------------------------------------------------------
+Release Notes for v1.5.5 , updated October 2016 by NeoRame:
+  * add Halloween Special Event
+  * some cosmetic changes
   
 -----------------------------------------------------------------------
 Uses 2x Sure 2416 LED modules, arduino and DS1307 clock chip.
